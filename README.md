@@ -1,2 +1,2 @@
-# codesthapati
-CodeSthapati is an AI-powered coding assistant that transforms natural language prompts into executable code, enhancing developer productivity and code quality. It automates code generation, debugging, and optimization tasks, providing real-time suggestions and context-aware assistance.
+# Agentic AI Code
+Agentic AI Code is an AI-powered coding assistant that transforms natural language prompts into executable code, enhancing developer productivity and code quality. It automates code generation, debugging, and optimization tasks, providing real-time suggestions and context-aware assistance.
