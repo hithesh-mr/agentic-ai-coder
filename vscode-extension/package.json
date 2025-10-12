@@ -1,0 +1,41 @@
+{
+  "name": "agentic-ai-coder",
+  "displayName": "Agentic AI Coder",
+  "description": "Plain-JS VS Code extension for an agentic coding assistant.",
+  "version": "0.0.1",
+  "publisher": "local-dev",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:agenticCoder.hello",
+    "onCommand:agenticCoder.pingBackend"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "agenticCoder.hello",
+        "title": "Agentic Coder: Hello"
+      },
+      {
+        "command": "agenticCoder.pingBackend",
+        "title": "Agentic Coder: Ping Backend"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Agentic Coder",
+      "properties": {
+        "agenticCoder.backendBaseUrl": {
+          "type": "string",
+          "default": "http://127.0.0.1:5000",
+          "description": "Base URL for the backend API (no trailing slash)."
+        }
+      }
+    }
+  }
+}
