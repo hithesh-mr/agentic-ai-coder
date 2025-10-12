@@ -15,24 +15,24 @@ This document defines the end-to-end plan to build a VSCode-based AI coding assi
 
 ## High-Level Architecture
 ```mermaid
-graph TD
-  U[Developer in VSCode] --> E[VSCode Extension (TS)]
-  E --> U
-  E --> B[Backend API]
-  B --> E
-  B --> L[LLM Inference (Azure OpenAI)]
-  B --> K[Knowledge Graph / Context Store]
-  K --> B
-  K --> S[Storage (Graph DB / Vector / Blob)]
-  S --> K
-  B --> V[Validation / Linters / Translators]
-  E -.-> LC[Local Cache (project files, versions, history)]
-  subgraph Cross-cutting
-    X[Auth/Security]:::aux
-    T[Logging/Telemetry]:::aux
-    CI[CI/CD & Versioning]:::aux
+graph TD;
+  U["Developer in VSCode"] --> E["VSCode Extension (TS)"];
+  E --> U;
+  E --> B["Backend API"];
+  B --> E;
+  B --> L["LLM Inference (Azure OpenAI)"];
+  B --> K["Knowledge Graph / Context Store"];
+  K --> B;
+  K --> S["Storage (Graph DB / Vector / Blob)"];
+  S --> K;
+  B --> V["Validation / Linters / Translators"];
+  E -.-> LC["Local Cache (project files, versions, history)"];
+  subgraph CrossCutting
+    X["Auth/Security"]:::aux;
+    T["Logging/Telemetry"]:::aux;
+    CI["CI/CD & Versioning"]:::aux;
   end
-  classDef aux fill:#f0f0f0,stroke:#bbb,color:#333
+  classDef aux fill:#f0f0f0,stroke:#bbb,color:#333;
 ```
 
 ### Component Responsibilities
