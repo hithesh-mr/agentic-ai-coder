@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple TODO App</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>TODOs</h1>
+
+    <div class="add-row">
+      <input id="todo-text" type="text" placeholder="What needs to be done?" />
+      <button id="add-btn">Add</button>
+    </div>
+
+    <ul id="todo-list" class="todos"></ul>
+
+    <div class="footer">
+      <span id="count"></span>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
